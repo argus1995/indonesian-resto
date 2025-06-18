@@ -58,6 +58,7 @@ function App() {
     <div className="container">
       <Header />
       <Menu />
+      <Footer />
     </div>
   );
 }
@@ -117,6 +118,17 @@ function MenuCard({ menuData }) {
         {menuData.soldOut ? "SOLD OUT" : price}
       </p>
     </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>
+      <p>
+        <strong>📞 Contact:</strong> 0812-3456-7890 | <strong>✉️ Email:</strong>{" "}
+        info@indonesianresto.id
+      </p>
+    </footer>
   );
 }
 
