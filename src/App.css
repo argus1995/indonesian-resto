@@ -108,3 +108,16 @@ main {
   font-weight: bold;
   color: #d62828;
 }
+
+.menu-item.sold-out {
+  color: #888;
+}
+
+.menu-item.sold-out img {
+  filter: grayscale();
+  opacity: 0.8;
+}
+
+.menu-item p.price.sold-out {
+  color: #888;
+}

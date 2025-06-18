@@ -109,11 +109,13 @@ function MenuCard({ menuData }) {
   });
 
   return (
-    <div className="menu-item">
+    <div className={`menu-item ${menuData.soldOut ? "sold-out" : ""}`}>
       <img src={menuData.image} alt={menuData.name} />
       <h3>{menuData.name}</h3>
       <p>{menuData.description}</p>
-      <p className="price">{price}</p>
+      <p className={`price ${menuData.soldOut ? "sold-out" : ""}`}>
+        {menuData.soldOut ? "SOLD OUT" : price}
+      </p>
     </div>
   );
 }
