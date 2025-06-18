@@ -124,11 +124,38 @@ function MenuCard({ menuData }) {
 function Footer() {
   return (
     <footer>
+      <OpenStatus />
       <p>
         <strong>📞 Contact:</strong> 0812-3456-7890 | <strong>✉️ Email:</strong>{" "}
         info@indonesianresto.id
       </p>
     </footer>
+  );
+}
+
+function OpenStatus() {
+  const hour = new Date().getHours();
+  const openHour = 7;
+  const closeHour = 21;
+  const isOpen = hour >= openHour && hour < closeHour;
+
+  return (
+    <>
+      {isOpen && <button>📦 Order Now</button>}
+      {isOpen ? (
+        <p>
+          🕒 Status: <strong>We're Open</strong> (Everyday {openHour}:00 -{" "}
+          {closeHour}:00)
+        </p>
+      ) : (
+        <p>
+          <p>
+            🕒 Status: <strong>We are currently closed.</strong> We will reopen
+            at {openHour}:00 - {closeHour}:00
+          </p>
+        </p>
+      )}
+    </>
   );
 }
 
