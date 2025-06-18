@@ -74,30 +74,46 @@ function Header() {
 }
 
 function Menu() {
+  const menu = menuData;
+  // const menu = [];
+  const numMenu = menu.length;
   return (
     <main>
       <h2 className="menu-title">Today's Menu 🍽️</h2>
-      <p>
-        Welcome to <strong>Indonesian Resto</strong>! We serve authentic
-        Indonesian cuisine — from savory street food to comforting traditional
-        soups. Explore today's menu below.
-      </p>
-      <div className="menu-grid">
-        {menuData.map((menu) => (
-          <MenuCard key={menu.id} menuData={menu} />
-        ))}
-      </div>
+      {numMenu > 0 ? (
+        <>
+          <p>
+            Welcome to <strong>Indonesian Resto</strong>! We serve authentic
+            Indonesian cuisine — from savory street food to comforting
+            traditional soups. Explore today's menu below.
+          </p>
+          <div className="menu-grid">
+            {menuData.map((menu) => (
+              <MenuCard key={menu.id} menuData={menu} />
+            ))}
+          </div>
+        </>
+      ) : (
+        <p>We're still working on our menu. Please come back later :)</p>
+      )}
     </main>
   );
 }
 
 function MenuCard({ menuData }) {
+  const price = menuData.price.toLocaleString("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  });
+
   return (
     <div className="menu-item">
       <img src={menuData.image} alt={menuData.name} />
       <h3>{menuData.name}</h3>
       <p>{menuData.description}</p>
-      <p className="price">{menuData.price}</p>
+      <p className="price">{price}</p>
     </div>
   );
 }
