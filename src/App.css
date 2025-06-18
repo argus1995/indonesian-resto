@@ -130,3 +130,20 @@ footer {
   font-size: 16px;
   margin-top: 40px;
 }
+
+footer button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 15px 0;
+  font-size: 16px;
+  color: #1b1b1b;
+  transition: transform 0.2s ease;
+}
+
+footer button:hover {
+  background-color: #e6b800;
+}
