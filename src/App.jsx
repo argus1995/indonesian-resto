@@ -1,5 +1,58 @@
 import "./App.css";
 
+const menuData = [
+  {
+    id: 1,
+    name: "Nasi Goreng",
+    image: "nasi-goreng.png",
+    description: "Fried rice with egg, chicken, and sweet soy sauce.",
+    price: 12000,
+    soldOut: false,
+  },
+  {
+    id: 2,
+    name: "Rendang",
+    image: "rendang.jpg",
+    description: "Spicy slow-cooked beef in coconut milk and spices.",
+    price: 17000,
+    soldOut: false,
+  },
+  {
+    id: 3,
+    name: "Gado-gado",
+    image: "gado-gado.png",
+    description: "Vegetable salad with peanut dressing and boiled egg.",
+    price: 8000,
+    soldOut: false,
+  },
+  {
+    id: 4,
+    name: "Soto Ayam",
+    image: "soto-ayam.png",
+    description:
+      "Chicken soup with turmeric broth, vermicelli, cabbage, and egg.",
+    price: 15000,
+    soldOut: false,
+  },
+  {
+    id: 5,
+    name: "Bakso",
+    image: "bakso.jpg",
+    description:
+      "Meatball soup with noodles, tofu, boiled egg, and savory broth.",
+    price: 10000,
+    soldOut: false,
+  },
+  {
+    id: 6,
+    name: "Sate Ayam",
+    image: "sate-ayam.jpg",
+    description: "Grilled chicken skewers with peanut sauce.",
+    price: 14000,
+    soldOut: true,
+  },
+];
+
 function App() {
   return (
     <div className="container">
@@ -30,24 +83,21 @@ function Menu() {
         soups. Explore today's menu below.
       </p>
       <div className="menu-grid">
-        <MenuCard />
-        <MenuCard />
-        <MenuCard />
-        <MenuCard />
-        <MenuCard />
-        <MenuCard />
+        {menuData.map((menu) => (
+          <MenuCard key={menu.id} menuData={menu} />
+        ))}
       </div>
     </main>
   );
 }
 
-function MenuCard() {
+function MenuCard({ menuData }) {
   return (
     <div className="menu-item">
-      <img src="bakso.jpg" alt="Bakso" />
-      <h3>Bakso</h3>
-      <p>Meatball soup with noodles, tofu, boiled egg, and savory broth.</p>
-      <p>10000</p>
+      <img src={menuData.image} alt={menuData.name} />
+      <h3>{menuData.name}</h3>
+      <p>{menuData.description}</p>
+      <p className="price">{menuData.price}</p>
     </div>
   );
 }
