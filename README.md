@@ -1,12 +1,78 @@
-# React + Vite
+# 🇮🇩 Indonesian Resto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and modern Indonesian restaurant web app built using **React**, **Vite**, **HTML**, and **CSS**. This project showcases a clean UI and key React features such as reusable components, conditional rendering, and JavaScript list rendering using `.map()`.
 
-Currently, two official plugins are available:
+Live Demo: [View on Vercel](https://indonesian-resto.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ **Menu Display** – Dynamically renders a list of Indonesian dishes using `.map()`
+- 🏷️ **Sold Out Styling** – Special visual style for dishes that are sold out
+- 🟢 **Open Status Indicator** – Shows if the restaurant is currently open or closed
+- ♻️ **Reusable Components** – Modular component structure (e.g. Header, MenuItem, Footer, etc)
+- 🎯 **JSX & Destructuring** – Clean, readable code using object destructuring
+- ❓ **Ternary Operators** – Conditional rendering for open/close status and sold out logic
+- 💻 **Responsive Design** – Looks great on mobile and desktop
+- ⚡ **Built with Vite** – Fast development and build tool
+- 🌐 **Deployed on Vercel** – One-click deploy and CI/CD support
+
+---
+
+## 🧑‍💻 Tech Stack
+
+- **React** – UI library
+- **Vite** – Development/build tool
+- **HTML & CSS** – Markup and styling
+- **Vercel** – Deployment
+
+---
+
+## 📂 Project Structure
+
+```bash
+indonesian-resto/
+├── public/ # Images
+├── src/
+│   ├── App.css
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package.json
+└── README.md
+```
+
+## 📸 Screenshot
+
+![Indonesian Resto App](./screenshot.png)
+
+> 💡 Tip: Put your `screenshot.png` in the root directory or `public/` and update the path if needed.
+
+---
+
+## 🛠️ How to Run Locally
+
+To run this project on your local machine:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/indonesian-resto.git
+cd indonesian-resto
+
+# 2. Install the dependencies
+npm install
+
+# 3. Start the development server
+npm run dev
+```
+
+📦 Build for Production
+
+```bash
+npm run build
+```
+
+## 📝 License
+
+This project is open-source and available under the MIT License.
